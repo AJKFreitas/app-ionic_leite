@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Laboratório</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,27 +12,27 @@
     
       <ion-item>
         <ion-label stacked>Índice de Gordura</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="gordura"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label stacked>Crioscopia</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text" name="crioscopia"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Sólidos Não Gordurados</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text" name="solidos"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Proteína Total</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text" name="cpp" name="proteina"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Estabilidade de Alizarol</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text" name="alizarol"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -42,16 +42,18 @@
 
       <ion-item>
         <ion-label stacked>Contagem de Células Somáticas</ion-label>
-        <ion-input id="cpp" name="cpp" type="text" ></ion-input>
+        <ion-input id="cpp" name="contagem" type="text" ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Resíduos</ion-label>
-        <ion-input id="cpp" name="cpp" type="text" ></ion-input>
+        <ion-input id="cpp" name="residuo" type="text" ></ion-input>
       </ion-item>
+
     </ion-list>
 
 
-  
-  <button ion-button secondary menuToggle>Enviar Análise</button>
+  <div text-center>
+    <button ion-button secondary menuToggle>Enviar Análise</button>
+  </div>
 </ion-content>
