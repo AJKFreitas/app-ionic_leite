@@ -12,46 +12,52 @@
     
       <ion-item>
         <ion-label stacked>Índice de Gordura</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="lab.gordura" name="gordura"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label stacked>Crioscopia</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text"[(ngModel)]="lab.indice_crioscopico" name="indice_crioscopico"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked>Sólidos Não Gordurados</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-label stacked>Sólidos Não Gordurosos</ion-label>
+        <ion-input  type="text"[(ngModel)]="lab.solidos_n_gordurosos" name="solidos_n_gordurosos"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Proteína Total</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text"[(ngModel)]="lab.proteina_total" name="proteina_total"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Estabilidade de Alizarol</ion-label>
-        <ion-input  type="text"></ion-input>
+        <ion-input  type="text"[(ngModel)]="lab.estabilidade_alizarol" name="estabilidade_alizarol"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>CPP</ion-label>
-        <ion-input id="cpp" name="cpp" type="text" ></ion-input>
+        <ion-input id="cpp"  type="text" [(ngModel)]="lab.cont_placas" name="cont_placas"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Contagem de Células Somáticas</ion-label>
-        <ion-input id="cpp" name="cpp" type="text" ></ion-input>
+        <ion-input id="cpp" type="text" [(ngModel)]="lab.cont_celula_somatica" name="cont_celula_somatica"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Resíduos</ion-label>
-        <ion-input id="cpp" name="cpp" type="text" ></ion-input>
+        <ion-input id="cpp" name="cpp" type="text" [(ngModel)]="lab.residuos" name="residuos"></ion-input>
+      </ion-item>
+    </ion-list>
+   
+    <ion-list inset>
+      <ion-item *ngFor="let lb of labs">
+        <h2>{{lb.createdAt}}</h2>
+        <p>{{lb.nome_produtor}}</p>
       </ion-item>
     </ion-list>
 
-
   
-  <button ion-button secondary menuToggle>Enviar Análise</button>
+  <button ion-button secondary (click)="addAvaliacoes()">Enviar Análise</button>
 </ion-content>
